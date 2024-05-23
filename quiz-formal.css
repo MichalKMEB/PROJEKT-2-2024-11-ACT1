@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(code_text_programming_192795_1920x1080.jpg);
+}
+
+
+.app {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn{
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover:not([disabled]) {
+    background: rgb(177, 105, 245);
+    color: white;
+
+}
+
+
+#next-btn {
+    background: rgb(119, 85, 211);
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    display: none;
+}
+
+
+.correct {
+    background: rgb(46, 219, 46);
+}
+
+.incorrect {
+    background: rgb(221, 7, 78);
+}
+
+
+.navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--navbar-bg);
+    /* position: fixed; */
+    z-index: 100;
+    width: 100%;
+    transition: background-color 0.5s;
+  }
+  
+  .strip {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+  }
+  
+  .strip .logo {
+    margin-left: 10%;
+    margin-right: 70px;
+  }
+  
+  .strip .under ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .strip .under li {
+    margin-right: 40px;
+    font-size: 20px;
+  }
+  
+  .strip .under a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.5s;
+  }
+  
+  .strip .under a:hover {
+    color: var(--link-hover-color);
+    transition: 0.5s;
+  }
+  
+  .strip .motyw {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .strip .buy-button {
+    margin-left: 30px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-size: 25px;
+    transition: color 0.5s;
+  }
+  
+  .buy-button {
+    background-color: rgb(88, 90, 241);
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+  }
+  
+  .buy-button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .buy-button i {
+    margin-right: 7.5px;
+  }
+  
+  .buy-button:hover {
+    background-color: rgb(47, 50, 233);
+    transition: 0.5s;
+  }
+  
+  .motyw {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 27px;
+    margin: 0 10px;
+  }
+  
+  .main-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .motyw-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .motyw-switch:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.1s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .motyw-switch {
+    background-color: rgb(88, 90, 241);
+  }
+  
+  input:checked + .motyw-switch:before {
+    transform: translateX(16px);
+  }
+  
+  :root {
+    --navbar-bg: white;
+    --text-color: black;
+    --link-hover-color: rgb(88, 90, 241);
+    --main-bg-gradient: linear-gradient(
+      to right,
+      #111224,
+      #2e2963,
+      #746bba,
+      #e9d5e1
+    );
+    --body-bg-color: white;
+  }
+  
+  body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+  }
+  
+  body.dark-mode {
+    --navbar-bg: black;
+    --text-color: white;
+    --link-hover-color: rgb(150, 150, 241);
+    --body-bg-color: rgb(10, 12, 34);
+  }
+  
+  body.light-mode {
+    --navbar-bg: white;
+    --text-color: black;
+    --link-hover-color: rgb(88, 90, 241);
+    --body-bg-color: white;
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Code Runner - Zadanie</title>
+    <link rel="stylesheet" href="zadanie1.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="strip">
+        <div class="logo">
+          <h2><a href="index.html">Silicon</a></h2>
+        </div>
+        <div class="under">
+          <ul>
+            <li><a href="codeterminal.html">Edytor Kodu</a></li>
+            <li><a href="zadania.html">Zadania</a></li>
+            <li><a href="quiz-formal.html">Quiz</a></li>
+          </ul>
+        </div>
+        <div class="motyw">
+          <span class="theme-label">Light</span>
+          <label class="main-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="motyw-switch"></span>
+          </label>
+          <span class="theme-label">Dark</span>
+        </div>
+        <div class="buy-button">
+          <a href="#" class="buy-button2"
+            ><i class="fa-solid fa-basket-shopping"></i>Buy Now</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="naglowek">
+      <h2>Zadanie 5</h2>
+    </div>
+    <div class="conatiner-exe">
+      <div class="polecenie">
+        <p>
+          Napisz program, który będzie drukować liczby od 1 do 10 włącznie, użwająć pętli for.
+        </p>
+      </div>
+    </div>
+    <div class="editor-output-container">
+      <textarea id="editor" placeholder="Napisz kod tutaj..."></textarea>
+      <div id="output"></div>
+      <div id="result"></div>
+    </div>
+    <button onclick="runCode()" class="run-code-but">Run Code</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+    <script src="zadanie5.js"></script>
+  </body>
+</html>

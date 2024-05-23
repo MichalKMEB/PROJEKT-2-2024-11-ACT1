@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+  background: var(--main-bg-gradient);
+  color: var(--body-text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.naglowek {
+  font-size: 25px;
+  color: var(--heading-text-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.conatiner-exe {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.polecenie {
+  background-color: white;
+  color: var(--polecenie-text-color);
+  height: 60px;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid;
+}
+
+.editor-output-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 40px;
+}
+
+#editor,
+#output {
+  width: 60%;
+  height: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px black;
+  font-size: 17px;
+}
+
+#editor {
+  background-color: #f9f9f9;
+  resize: none;
+  margin-right: 70px;
+}
+
+#output {
+  background-color: #eef2f3;
+  overflow: auto;
+}
+
+.run-code-but {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: rgb(28, 190, 226);
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.run-code-but:hover {
+  transform: translateY(-3px);
+}
+
+#result {
+  margin-top: 50px;
+}
+
+.navbar {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  background-color: var(--navbar-bg);
+  z-index: 100;
+  width: 100%;
+  transition: background-color 0.5s;
+}
+
+.strip {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+}
+
+.strip .logo {
+  margin-left: 10%;
+  margin-right: 70px;
+}
+
+.strip .under ul {
+  display: flex;
+  list-style: none;
+}
+
+.strip .under li {
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+.strip .under a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+
+.strip .under a:hover {
+  color: var(--link-hover-color);
+  transition: 0.5s;
+}
+
+.strip .motyw {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.strip .buy-button {
+  margin-left: 30px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: 25px;
+  transition: color 0.5s;
+}
+
+.buy-button {
+  background-color: rgb(174, 20, 230);
+  width: 120px;
+  height: 35px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 100px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+.buy-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.buy-button i {
+  margin-right: 7.5px;
+}
+
+.buy-button:hover {
+  background-color: rgb(47, 50, 233);
+  transition: 0.5s;
+}
+
+.motyw {
+  display: flex;
+  align-items: center;
+}
+
+.main-switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 27px;
+  margin: 0 10px;
+}
+
+.main-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.motyw-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.motyw-switch:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.1s;
+  border-radius: 50%;
+}
+
+input:checked + .motyw-switch {
+  background-color: rgb(88, 90, 241);
+}
+
+input:checked + .motyw-switch:before {
+  transform: translateX(16px);
+}
+
+body {
+  background: var(--main-bg-gradient);
+  color: var(--body-text-color);
+}
+
+
+.polecenie {
+  background-color: white;
+  height: 60px;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid;
+}
+
+:root {
+  --navbar-bg: white;
+  --text-color: black;
+  --link-hover-color: rgb(88, 90, 241);
+  --main-bg-gradient: linear-gradient(to right, #8694f2, #8041f5);
+  --body-bg-color: white;
+  --body-text-color: black;
+}
+
+body.dark-mode {
+  --navbar-bg: black;
+  --text-color: white;
+  --link-hover-color: rgb(150, 150, 241);
+  --main-bg-gradient: linear-gradient(to right, #111224, #2e2963, #746bba, #e9d5e1);
+  --body-bg-color: rgb(10, 12, 34);
+}
+
+body.light-mode {
+  --navbar-bg: white;
+  --text-color: black;
+  --link-hover-color: rgb(88, 90, 241);
+  --main-bg-gradient: linear-gradient(to right, #8694f2, #8041f5);
+  --body-bg-color: white;
+  --body-text-color: black;
+}

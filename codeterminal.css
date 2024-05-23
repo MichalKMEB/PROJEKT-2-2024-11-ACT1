@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: var(--main-bg-gradient);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 2s;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 35px;
+    color: var(--header-color);
+    margin-bottom: 20px;
+}
+
+#intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: var(--intro-color);
+    line-height: 1.6;
+    text-align: justify;
+    margin-left: 150px;
+    margin-right: 300px;
+    margin-top: 50px;
+}
+
+.editor-output-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#editor, #output {
+    margin-top: 50px;
+    width: 70%;
+    height: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    color: #000;
+}
+
+#editor {
+    border: 2px solid #00f2fe;
+    background-color: #f9f9f9;
+    resize: none;
+    margin-right: 170px;
+    width: 80%;
+    margin-left: 100px;
+}
+
+#output {
+    background-color: #eef2f3;
+    border: 2px solid #4facfe;
+    overflow: auto;
+    width: 40%;
+    margin-right: 50px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #fff;
+    background-color: var(--button-bg-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: var(--button-active-bg-color);
+    transform: scale(1);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+}
+
+.navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--navbar-bg);
+    z-index: 100;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.strip {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+.strip .logo {
+    margin-left: 10%;
+    margin-right: 70px;
+}
+
+.strip .under ul {
+    display: flex;
+    list-style: none;
+}
+
+.strip .under li {
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.strip .under a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+.strip .under a:hover {
+    color: var(--link-hover-color);
+    transition: 0.5s;
+}
+
+.strip .motyw {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.strip .buy-button {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-size: 25px;
+    transition: color 0.5s;
+}
+
+.buy-button {
+    background-color: rgb(88, 90, 241);
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.buy-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.buy-button i {
+    margin-right: 7.5px;
+}
+
+.buy-button:hover {
+    background-color: rgb(47, 50, 233);
+    transition: 0.5s;
+}
+
+.motyw {
+    display: flex;
+    align-items: center;
+}
+
+.main-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 27px;
+    margin: 0 10px;
+}
+
+.main-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.motyw-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.motyw-switch:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.1s;
+    border-radius: 50%;
+}
+
+input:checked + .motyw-switch {
+    background-color: rgb(88, 90, 241);
+}
+
+input:checked + .motyw-switch:before {
+    transform: translateX(16px);
+}
+
+:root {
+    --navbar-bg: white;
+    --text-color: black;
+    --header-color: #ffffff;
+    --intro-color: #000;
+    --link-hover-color: rgb(88, 90, 241);
+    --main-bg-gradient: linear-gradient(to right, #a94ffe, #6c24f0);
+    --body-bg-color: white;
+    --button-bg-color: #4facfe;
+    --button-hover-bg-color: #3a8cd7;
+    --button-active-bg-color: #2a6ea1;
+
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+
+}
+
+body.dark-mode {
+    --navbar-bg: #000;
+    --text-color: #fff;
+    --header-color: #ffffff;
+    --intro-color: #ffffff;
+    --link-hover-color: rgb(150, 150, 241);
+    --main-bg-gradient: linear-gradient(to right, #111224, #2e2963, #746bba, #e9d5e1);
+    --body-bg-color: rgb(10, 12, 34);
+    --button-bg-color: #4facfe;
+    --button-hover-bg-color: #3a8cd7;
+    --button-active-bg-color: #2a6ea1;
+}
+
+
